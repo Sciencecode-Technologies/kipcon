@@ -1,2 +1,2 @@
-# kipcon
+# Kipcon
 Configuration manager.
