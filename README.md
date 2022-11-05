@@ -1,0 +1,2 @@
+# kipcon
+Configuration manager.
