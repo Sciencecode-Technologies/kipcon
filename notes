@@ -1,0 +1,7 @@
+run with VENV
+
+mypy
+flake8
+pytest
+
+pip install -e .
