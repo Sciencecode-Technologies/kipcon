@@ -1,3 +1,5 @@
-from kipcon import kipdb
+from kipcon.kipdb import *
 
-print(kipdb.test())
+
+if __name__ == "__main__":
+    Create_Database()

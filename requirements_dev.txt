@@ -4,3 +4,4 @@ pytest-cov
 mypy
 types-requests
 SQLAlchemy
+sqlalchemy-utils
