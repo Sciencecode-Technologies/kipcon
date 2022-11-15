@@ -1,0 +1,4 @@
+FROM python:3.11.0-alpine
+WORKDIR /kipcon
+RUN pip install virtualenv
+RUN virtualenv venv
