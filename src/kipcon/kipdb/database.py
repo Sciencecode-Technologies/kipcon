@@ -9,5 +9,5 @@ class Create_Database:
         
         if not database_exists(self.engine.url):
             create_database(self.engine.url)
-
-        
+            # tablolarda meta_Create_kullanılacak
+            # create tables gibi bir fonksiyon
