@@ -11,3 +11,6 @@ class Create_Database:
             create_database(self.engine.url)
             # tablolarda meta_Create_kullanılacak
             # create tables gibi bir fonksiyon
+
+    def getEngine(self):
+        return self.engine
