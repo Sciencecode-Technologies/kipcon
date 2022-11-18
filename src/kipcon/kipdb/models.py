@@ -32,7 +32,7 @@ class CONST_TOKENS(Base):
 
 class Conf_types(Base):
     __tablename__ = "Conf_types"
-    conf_id: Column = Column(Integer, primary_key = True)
+    conf_id: Column = Column(Integer, primary_key = True, autoincrement=True)
     conf_type: Column = Column(String(8), unique = True, nullable = False)
 
 class Config_files(Base):
