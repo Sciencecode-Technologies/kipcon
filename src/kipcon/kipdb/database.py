@@ -9,6 +9,8 @@ import os
 class Create_Database:
     def __init__(self, db_path: str=os.path.dirname(__file__), db_name: str="kipcon_main.db"):
         self.__ENGINE = create_engine('sqlite:///'+db_path+'/'+db_name, echo=True)
+        
+        self.db_path = db_path
 
         if not database_exists(self.__ENGINE.url):
             create_database(self.__ENGINE.url)
@@ -22,6 +24,7 @@ class Create_Database:
         flag = False
         conn = self.__ENGINE.connect()
         result = conn.execute(select(CONST_FOLDERS))
+        self.cfo = config_folders_table
 
         if result.fetchone() == None:
             # checks if configuration data is saved in database
@@ -37,3 +40,14 @@ class Create_Database:
 
     def getEngine(self):
         return self.__ENGINE
+
+    def create_folder_structure(self):
+        flag = False
+        if self.cfo.main_folder_name not in os.listdir(self.db_path):
+            os.mkdir(self.db_path+"/"+self.cfo.main_folder_name)
+            os.mkdir(self.db_path+"/"+self.cfo.main_folder_name+"/"+self.cfo.ini_folder_name)
+            os.mkdir(self.db_path+"/"+self.cfo.main_folder_name+"/"+self.cfo.json_folder_name)
+            os.mkdir(self.db_path+"/"+self.cfo.main_folder_name+"/"+self.cfo.yaml_folder_name)
+            flag = True
+
+        return flag

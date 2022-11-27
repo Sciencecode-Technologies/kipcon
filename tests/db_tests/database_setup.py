@@ -26,3 +26,5 @@ if __name__ == "__main__":
         # all in local folders
 
         # finally database created (kipcon_main.db)
+
+        db.create_folder_structure()
