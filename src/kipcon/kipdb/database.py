@@ -51,3 +51,16 @@ class Create_Database:
             flag = True
 
         return flag
+
+
+class Database_Transactions:
+    #change const_folders
+    class const_folders(CONST_FOLDERS):
+        
+        def main_folder_name(self):
+            def change():
+                pass
+            
+
+class User_Transactions:
+    pass
