@@ -14,7 +14,7 @@ class CONST_FOLDERS(Base):
     json_folder_name: Column = Column('json_folder_name', String(18), nullable = False)
     ini_folder_name: Column = Column('ini_folder_name', String(18), nullable = False)
     yaml_folder_name: Column = Column('yaml_folder_name', String(18), nullable = False)
-    
+
 class Clients(Base):
     __tablename__ = "Clients"
     cl_id = Column(Integer, primary_key = True, nullable = False, autoincrement=True)
