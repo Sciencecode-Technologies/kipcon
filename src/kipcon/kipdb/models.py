@@ -14,6 +14,10 @@ class CONST_FOLDERS(Base):
     json_folder_name: Column = Column('json_folder_name', String(18), nullable = False)
     ini_folder_name: Column = Column('ini_folder_name', String(18), nullable = False)
     yaml_folder_name: Column = Column('yaml_folder_name', String(18), nullable = False)
+    # Column siniflarinden parametre guncelleme mumkun mu?
+    
+    def get_keys(self):
+        pass
 
 class Clients(Base):
     __tablename__ = "Clients"
