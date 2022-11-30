@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 # Databsase
+.db
 *.db
 *.sqlite
 *.sqldb
