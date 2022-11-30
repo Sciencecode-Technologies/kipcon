@@ -1,15 +1,33 @@
 from kipcon.kipdb.models import CONST_FOLDERS
-
-def test():
-    print("eben")
+from sqlalchemy import update
 
 
-"""
-@create_token
-def create():
-    pass
+"""def add_client(func):
+    def inner(a):
+        return func(a)
+    return inner
 
-@add_client
-def add(name = "user"):
-    pass
-"""
+def add_client2(func):
+    def inner():
+        return func(3)
+    return inner
+
+def add_client3(*args, **kwargs):
+    def inner(func):
+        print(kwargs['f'])
+        func()
+    return inner
+
+def addx(**kwargs):
+    def inner(func):
+        return func(kwargs['x']*2)
+    return inner"""
+# PRACTICE
+
+
+def const_folders(**kwargs):
+    def inner(func):
+        new_value = func()
+        # UPDATE CODE ...
+        return True # or new_value
+    return inner
