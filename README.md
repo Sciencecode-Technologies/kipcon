@@ -1,2 +1,2 @@
 # Kipcon
-Configuration manager.
+Open Source Configuration manager.
