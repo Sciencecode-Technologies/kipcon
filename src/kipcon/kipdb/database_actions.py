@@ -11,5 +11,5 @@ def const_folders(**kwargs):
         new_value = func()
         #s = select(column(kwargs['column']))
         #r = connection.execute(s).fetchall()
-        return True # or new_value
+        return True # or new_value, if success
     return inner
