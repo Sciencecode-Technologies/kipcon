@@ -1,8 +1,10 @@
 from kipcon.kipdb import *
 
 if __name__ == "__main__":
-        db = Create_Database() # database creation
-        make(db.getEngine()) # tables added
+        # Creating Database
+        db = Create_Database()
+        # Creating Tables
+        make(db.getEngine())
 
         cfo = CONST_FOLDERS(
                 main_folder_name="config_folders",
